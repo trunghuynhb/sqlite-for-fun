@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1355B9CC1CF58C1A00C1CAD1 /* DrinkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1355B9CB1CF58C1A00C1CAD1 /* DrinkListViewController.m */; };
+		1355B9CF1CF5957200C1CAD1 /* CreateNewDrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1355B9CE1CF5957200C1CAD1 /* CreateNewDrinkViewController.m */; };
+		1394B9AF1CF181FA009AF00F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394B9AE1CF181FA009AF00F /* main.m */; };
+		1394B9B21CF181FA009AF00F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394B9B11CF181FA009AF00F /* AppDelegate.m */; };
+		1394B9B51CF181FA009AF00F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394B9B41CF181FA009AF00F /* ViewController.m */; };
+		1394B9B81CF181FA009AF00F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1394B9B61CF181FA009AF00F /* Main.storyboard */; };
+		1394B9BA1CF181FA009AF00F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1394B9B91CF181FA009AF00F /* Assets.xcassets */; };
+		1394B9BD1CF181FA009AF00F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1394B9BB1CF181FA009AF00F /* LaunchScreen.storyboard */; };
+		1394B9C81CF181FA009AF00F /* SimpleAuthorizationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394B9C71CF181FA009AF00F /* SimpleAuthorizationTests.m */; };
+		1394B9D31CF181FA009AF00F /* SimpleAuthorizationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394B9D21CF181FA009AF00F /* SimpleAuthorizationUITests.m */; };
+		1394B9E21CF1821C009AF00F /* DbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394B9E11CF1821C009AF00F /* DbManager.m */; };
+		13AFEB241CF23A4F00DA59CB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AFEB221CF23A4F00DA59CB /* RegisterViewController.m */; };
+		13AFEB271CF2498500DA59CB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AFEB261CF2498500DA59CB /* libsqlite3.tbd */; };
+		A561747E1CF7809700C9261A /* ShowDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A561747D1CF7809700C9261A /* ShowDeleteViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1394B9C41CF181FA009AF00F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1394B9A21CF181FA009AF00F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1394B9A91CF181FA009AF00F;
+			remoteInfo = SimpleAuthorization;
+		};
+		1394B9CF1CF181FA009AF00F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1394B9A21CF181FA009AF00F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1394B9A91CF181FA009AF00F;
+			remoteInfo = SimpleAuthorization;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1355B9CA1CF58C1A00C1CAD1 /* DrinkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkListViewController.h; sourceTree = "<group>"; };
+		1355B9CB1CF58C1A00C1CAD1 /* DrinkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkListViewController.m; sourceTree = "<group>"; };
+		1355B9CD1CF5957200C1CAD1 /* CreateNewDrinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewDrinkViewController.h; sourceTree = "<group>"; };
+		1355B9CE1CF5957200C1CAD1 /* CreateNewDrinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewDrinkViewController.m; sourceTree = "<group>"; };
+		1394B9AA1CF181FA009AF00F /* SimpleAuthorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAuthorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394B9AE1CF181FA009AF00F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1394B9B01CF181FA009AF00F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1394B9B11CF181FA009AF00F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1394B9B31CF181FA009AF00F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1394B9B41CF181FA009AF00F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1394B9B71CF181FA009AF00F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1394B9B91CF181FA009AF00F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1394B9BC1CF181FA009AF00F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1394B9BE1CF181FA009AF00F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1394B9C31CF181FA009AF00F /* SimpleAuthorizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAuthorizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394B9C71CF181FA009AF00F /* SimpleAuthorizationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAuthorizationTests.m; sourceTree = "<group>"; };
+		1394B9C91CF181FA009AF00F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1394B9CE1CF181FA009AF00F /* SimpleAuthorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAuthorizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394B9D21CF181FA009AF00F /* SimpleAuthorizationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAuthorizationUITests.m; sourceTree = "<group>"; };
+		1394B9D41CF181FA009AF00F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1394B9E01CF1821C009AF00F /* DbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbManager.h; sourceTree = "<group>"; };
+		1394B9E11CF1821C009AF00F /* DbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbManager.m; sourceTree = "<group>"; };
+		13AFEB211CF23A4F00DA59CB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		13AFEB221CF23A4F00DA59CB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		13AFEB261CF2498500DA59CB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A561747C1CF7809700C9261A /* ShowDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDeleteViewController.h; sourceTree = "<group>"; };
+		A561747D1CF7809700C9261A /* ShowDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDeleteViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1394B9A71CF181FA009AF00F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13AFEB271CF2498500DA59CB /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394B9C01CF181FA009AF00F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394B9CB1CF181FA009AF00F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1394B9A11CF181FA009AF00F = {
+			isa = PBXGroup;
+			children = (
+				13AFEB261CF2498500DA59CB /* libsqlite3.tbd */,
+				1394B9AC1CF181FA009AF00F /* SimpleAuthorization */,
+				1394B9C61CF181FA009AF00F /* SimpleAuthorizationTests */,
+				1394B9D11CF181FA009AF00F /* SimpleAuthorizationUITests */,
+				1394B9AB1CF181FA009AF00F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1394B9AB1CF181FA009AF00F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1394B9AA1CF181FA009AF00F /* SimpleAuthorization.app */,
+				1394B9C31CF181FA009AF00F /* SimpleAuthorizationTests.xctest */,
+				1394B9CE1CF181FA009AF00F /* SimpleAuthorizationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1394B9AC1CF181FA009AF00F /* SimpleAuthorization */ = {
+			isa = PBXGroup;
+			children = (
+				1394B9B01CF181FA009AF00F /* AppDelegate.h */,
+				1394B9B11CF181FA009AF00F /* AppDelegate.m */,
+				1394B9B31CF181FA009AF00F /* ViewController.h */,
+				1394B9B41CF181FA009AF00F /* ViewController.m */,
+				1394B9B61CF181FA009AF00F /* Main.storyboard */,
+				1394B9B91CF181FA009AF00F /* Assets.xcassets */,
+				1394B9BB1CF181FA009AF00F /* LaunchScreen.storyboard */,
+				1394B9BE1CF181FA009AF00F /* Info.plist */,
+				1394B9AD1CF181FA009AF00F /* Supporting Files */,
+				1394B9E01CF1821C009AF00F /* DbManager.h */,
+				1394B9E11CF1821C009AF00F /* DbManager.m */,
+				13AFEB211CF23A4F00DA59CB /* RegisterViewController.h */,
+				13AFEB221CF23A4F00DA59CB /* RegisterViewController.m */,
+				1355B9CA1CF58C1A00C1CAD1 /* DrinkListViewController.h */,
+				1355B9CB1CF58C1A00C1CAD1 /* DrinkListViewController.m */,
+				1355B9CD1CF5957200C1CAD1 /* CreateNewDrinkViewController.h */,
+				1355B9CE1CF5957200C1CAD1 /* CreateNewDrinkViewController.m */,
+				A561747C1CF7809700C9261A /* ShowDeleteViewController.h */,
+				A561747D1CF7809700C9261A /* ShowDeleteViewController.m */,
+			);
+			path = SimpleAuthorization;
+			sourceTree = "<group>";
+		};
+		1394B9AD1CF181FA009AF00F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1394B9AE1CF181FA009AF00F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1394B9C61CF181FA009AF00F /* SimpleAuthorizationTests */ = {
+			isa = PBXGroup;
+			children = (
+				1394B9C71CF181FA009AF00F /* SimpleAuthorizationTests.m */,
+				1394B9C91CF181FA009AF00F /* Info.plist */,
+			);
+			path = SimpleAuthorizationTests;
+			sourceTree = "<group>";
+		};
+		1394B9D11CF181FA009AF00F /* SimpleAuthorizationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1394B9D21CF181FA009AF00F /* SimpleAuthorizationUITests.m */,
+				1394B9D41CF181FA009AF00F /* Info.plist */,
+			);
+			path = SimpleAuthorizationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1394B9A91CF181FA009AF00F /* SimpleAuthorization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1394B9D71CF181FA009AF00F /* Build configuration list for PBXNativeTarget "SimpleAuthorization" */;
+			buildPhases = (
+				1394B9A61CF181FA009AF00F /* Sources */,
+				1394B9A71CF181FA009AF00F /* Frameworks */,
+				1394B9A81CF181FA009AF00F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleAuthorization;
+			productName = SimpleAuthorization;
+			productReference = 1394B9AA1CF181FA009AF00F /* SimpleAuthorization.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1394B9C21CF181FA009AF00F /* SimpleAuthorizationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1394B9DA1CF181FA009AF00F /* Build configuration list for PBXNativeTarget "SimpleAuthorizationTests" */;
+			buildPhases = (
+				1394B9BF1CF181FA009AF00F /* Sources */,
+				1394B9C01CF181FA009AF00F /* Frameworks */,
+				1394B9C11CF181FA009AF00F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1394B9C51CF181FA009AF00F /* PBXTargetDependency */,
+			);
+			name = SimpleAuthorizationTests;
+			productName = SimpleAuthorizationTests;
+			productReference = 1394B9C31CF181FA009AF00F /* SimpleAuthorizationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1394B9CD1CF181FA009AF00F /* SimpleAuthorizationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1394B9DD1CF181FA009AF00F /* Build configuration list for PBXNativeTarget "SimpleAuthorizationUITests" */;
+			buildPhases = (
+				1394B9CA1CF181FA009AF00F /* Sources */,
+				1394B9CB1CF181FA009AF00F /* Frameworks */,
+				1394B9CC1CF181FA009AF00F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1394B9D01CF181FA009AF00F /* PBXTargetDependency */,
+			);
+			name = SimpleAuthorizationUITests;
+			productName = SimpleAuthorizationUITests;
+			productReference = 1394B9CE1CF181FA009AF00F /* SimpleAuthorizationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1394B9A21CF181FA009AF00F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Infoway;
+				TargetAttributes = {
+					1394B9A91CF181FA009AF00F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					1394B9C21CF181FA009AF00F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1394B9A91CF181FA009AF00F;
+					};
+					1394B9CD1CF181FA009AF00F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1394B9A91CF181FA009AF00F;
+					};
+				};
+			};
+			buildConfigurationList = 1394B9A51CF181FA009AF00F /* Build configuration list for PBXProject "SimpleAuthorization" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1394B9A11CF181FA009AF00F;
+			productRefGroup = 1394B9AB1CF181FA009AF00F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1394B9A91CF181FA009AF00F /* SimpleAuthorization */,
+				1394B9C21CF181FA009AF00F /* SimpleAuthorizationTests */,
+				1394B9CD1CF181FA009AF00F /* SimpleAuthorizationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1394B9A81CF181FA009AF00F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1394B9BD1CF181FA009AF00F /* LaunchScreen.storyboard in Resources */,
+				1394B9BA1CF181FA009AF00F /* Assets.xcassets in Resources */,
+				1394B9B81CF181FA009AF00F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394B9C11CF181FA009AF00F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394B9CC1CF181FA009AF00F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1394B9A61CF181FA009AF00F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A561747E1CF7809700C9261A /* ShowDeleteViewController.m in Sources */,
+				13AFEB241CF23A4F00DA59CB /* RegisterViewController.m in Sources */,
+				1394B9B51CF181FA009AF00F /* ViewController.m in Sources */,
+				1394B9B21CF181FA009AF00F /* AppDelegate.m in Sources */,
+				1394B9AF1CF181FA009AF00F /* main.m in Sources */,
+				1394B9E21CF1821C009AF00F /* DbManager.m in Sources */,
+				1355B9CF1CF5957200C1CAD1 /* CreateNewDrinkViewController.m in Sources */,
+				1355B9CC1CF58C1A00C1CAD1 /* DrinkListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394B9BF1CF181FA009AF00F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1394B9C81CF181FA009AF00F /* SimpleAuthorizationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1394B9CA1CF181FA009AF00F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1394B9D31CF181FA009AF00F /* SimpleAuthorizationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1394B9C51CF181FA009AF00F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1394B9A91CF181FA009AF00F /* SimpleAuthorization */;
+			targetProxy = 1394B9C41CF181FA009AF00F /* PBXContainerItemProxy */;
+		};
+		1394B9D01CF181FA009AF00F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1394B9A91CF181FA009AF00F /* SimpleAuthorization */;
+			targetProxy = 1394B9CF1CF181FA009AF00F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1394B9B61CF181FA009AF00F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1394B9B71CF181FA009AF00F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1394B9BB1CF181FA009AF00F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1394B9BC1CF181FA009AF00F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1394B9D51CF181FA009AF00F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1394B9D61CF181FA009AF00F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1394B9D81CF181FA009AF00F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpleAuthorization/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Infoway.SimpleAuthorization;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1394B9D91CF181FA009AF00F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpleAuthorization/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Infoway.SimpleAuthorization;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1394B9DB1CF181FA009AF00F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SimpleAuthorizationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Infoway.SimpleAuthorizationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleAuthorization.app/SimpleAuthorization";
+			};
+			name = Debug;
+		};
+		1394B9DC1CF181FA009AF00F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SimpleAuthorizationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Infoway.SimpleAuthorizationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleAuthorization.app/SimpleAuthorization";
+			};
+			name = Release;
+		};
+		1394B9DE1CF181FA009AF00F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SimpleAuthorizationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Infoway.SimpleAuthorizationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SimpleAuthorization;
+			};
+			name = Debug;
+		};
+		1394B9DF1CF181FA009AF00F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SimpleAuthorizationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Infoway.SimpleAuthorizationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SimpleAuthorization;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1394B9A51CF181FA009AF00F /* Build configuration list for PBXProject "SimpleAuthorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1394B9D51CF181FA009AF00F /* Debug */,
+				1394B9D61CF181FA009AF00F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1394B9D71CF181FA009AF00F /* Build configuration list for PBXNativeTarget "SimpleAuthorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1394B9D81CF181FA009AF00F /* Debug */,
+				1394B9D91CF181FA009AF00F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1394B9DA1CF181FA009AF00F /* Build configuration list for PBXNativeTarget "SimpleAuthorizationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1394B9DB1CF181FA009AF00F /* Debug */,
+				1394B9DC1CF181FA009AF00F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1394B9DD1CF181FA009AF00F /* Build configuration list for PBXNativeTarget "SimpleAuthorizationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1394B9DE1CF181FA009AF00F /* Debug */,
+				1394B9DF1CF181FA009AF00F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1394B9A21CF181FA009AF00F /* Project object */;
+}
