@@ -12,13 +12,14 @@
 @interface DbManager : NSObject{
     NSString *databasePath;
     NSInteger user_id;
+    NSMutableArray *deleteDrinkCollection;
     
 }
 +(DbManager*) getSharedInstance;
 -(BOOL)createDB;
 -(BOOL)registerUser: (NSString *)username
                    : (NSString *)password;
-//-(BOOL)findUser: (NSString*) username;
+
 -(BOOL)login: (NSString *)username
             : (NSString *)password;
 -(BOOL)addDrink: (NSString *)name
@@ -26,5 +27,5 @@
 -(NSMutableArray *)getDrinkCollection;
 
 -(void)deleteDrink: (NSString *)name;
-
+-(NSMutableArray *)getDeleteDrinkCollection;
 @end

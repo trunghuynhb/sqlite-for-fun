@@ -92,7 +92,7 @@ static sqlite3_stmt *statement = nil;
 
 
 -(BOOL)login:(NSString *)username :(NSString *)password{
- 
+    deleteDrinkCollection = [[NSMutableArray alloc]init];
     BOOL isFound = NO;
     const char *dbpath = [databasePath UTF8String];
     NSLog(@"%@", databasePath);
@@ -145,21 +145,21 @@ static sqlite3_stmt *statement = nil;
 }
 
 -(NSMutableArray *)getDrinkCollection{
- 
+    //USE A DICTIONARY FOR THIS
     const char *dbpath = [databasePath UTF8String];
     if (sqlite3_open(dbpath, &database) == SQLITE_OK){
         
         NSString *querySQL = [NSString stringWithFormat:@"select * from drinks where user_id = \"%ld\"", user_id];
         const char *query_stmt = [querySQL UTF8String];
+        //NSMutableArray *drinkCollection = [[NSMutableArray alloc]init];
         NSMutableArray *drinkCollection = [[NSMutableArray alloc]init];
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK){
             while (sqlite3_step(statement) == SQLITE_ROW){
-                
+                //int drinkID = sqlite3_column_int(statement, 0);
                 char *nameField = (char *) sqlite3_column_text(statement, 2);
                 NSString *name = [[NSString alloc]initWithUTF8String:nameField];
                 [drinkCollection addObject:name];
-                NSLog(@"%@", name);
-                
+                //[drinkCollection setObject:name forKey:@(drinkID)];
             }
         
             sqlite3_reset(statement);
@@ -171,11 +171,12 @@ static sqlite3_stmt *statement = nil;
 }
 
 
+
 -(void)deleteDrink:(NSString *)name {
     char *err;
     const char *dbpath = [databasePath UTF8String];
+    [deleteDrinkCollection addObject:name];
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-        
         
         NSString *deleteSQL = [NSString stringWithFormat:@"delete from drinks where name = \"%@\" and user_id = \"%ld\"", name, (long)user_id];
         const char *delete_query = [deleteSQL UTF8String];
@@ -192,8 +193,17 @@ static sqlite3_stmt *statement = nil;
         }
     }
     
+}
+
+-(NSMutableArray *)getDeleteDrinkCollection{
+    return deleteDrinkCollection;
 
 }
+
+
+
+
+
 
 
 @end

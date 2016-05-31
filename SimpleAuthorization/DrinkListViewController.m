@@ -55,22 +55,27 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //
-    
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.text = [[DbManager getSharedInstance] getDrinkCollection][indexPath.row];
-    
     return cell;
     
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     NSMutableArray *temp=[[DbManager getSharedInstance] getDrinkCollection];
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [deleteDrinkColletion addObject:[temp objectAtIndex:indexPath.row]];
+        
         [[DbManager getSharedInstance] deleteDrink:[temp objectAtIndex:indexPath.row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else {
         NSLog(@"Unhandled editing style! %ld", (long)editingStyle);
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData]; // to reload selected cell
 }
 @end

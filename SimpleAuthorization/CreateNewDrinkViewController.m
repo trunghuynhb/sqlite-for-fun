@@ -40,7 +40,6 @@
         
         [[DbManager getSharedInstance]addDrink:_name.text :_price.text];
         
-        
     }
     else NSLog(@"Enter the field");
 }

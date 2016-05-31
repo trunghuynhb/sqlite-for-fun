@@ -20,7 +20,7 @@
 		1394B9E21CF1821C009AF00F /* DbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1394B9E11CF1821C009AF00F /* DbManager.m */; };
 		13AFEB241CF23A4F00DA59CB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AFEB221CF23A4F00DA59CB /* RegisterViewController.m */; };
 		13AFEB271CF2498500DA59CB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AFEB261CF2498500DA59CB /* libsqlite3.tbd */; };
-		A561747E1CF7809700C9261A /* ShowDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A561747D1CF7809700C9261A /* ShowDeleteViewController.m */; };
+		A56174811CF7B85100C9261A /* ShowDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56174801CF7B85100C9261A /* ShowDeleteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +66,8 @@
 		13AFEB211CF23A4F00DA59CB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		13AFEB221CF23A4F00DA59CB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		13AFEB261CF2498500DA59CB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		A561747C1CF7809700C9261A /* ShowDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDeleteViewController.h; sourceTree = "<group>"; };
-		A561747D1CF7809700C9261A /* ShowDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDeleteViewController.m; sourceTree = "<group>"; };
+		A561747F1CF7B85100C9261A /* ShowDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDeleteViewController.h; sourceTree = "<group>"; };
+		A56174801CF7B85100C9261A /* ShowDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDeleteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,8 @@
 				1355B9CB1CF58C1A00C1CAD1 /* DrinkListViewController.m */,
 				1355B9CD1CF5957200C1CAD1 /* CreateNewDrinkViewController.h */,
 				1355B9CE1CF5957200C1CAD1 /* CreateNewDrinkViewController.m */,
-				A561747C1CF7809700C9261A /* ShowDeleteViewController.h */,
-				A561747D1CF7809700C9261A /* ShowDeleteViewController.m */,
+				A561747F1CF7B85100C9261A /* ShowDeleteViewController.h */,
+				A56174801CF7B85100C9261A /* ShowDeleteViewController.m */,
 			);
 			path = SimpleAuthorization;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A561747E1CF7809700C9261A /* ShowDeleteViewController.m in Sources */,
+				A56174811CF7B85100C9261A /* ShowDeleteViewController.m in Sources */,
 				13AFEB241CF23A4F00DA59CB /* RegisterViewController.m in Sources */,
 				1394B9B51CF181FA009AF00F /* ViewController.m in Sources */,
 				1394B9B21CF181FA009AF00F /* AppDelegate.m in Sources */,

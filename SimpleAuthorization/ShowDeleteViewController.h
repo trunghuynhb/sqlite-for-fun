@@ -6,8 +6,8 @@
 //  Copyright © 2016 Infoway. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface ShowDeleteViewController : NSObject
+#import <UIKit/UIKit.h>
+#import "DbManager.h"
+@interface ShowDeleteViewController : UIViewController<UITableViewDataSource>
 
 @end
