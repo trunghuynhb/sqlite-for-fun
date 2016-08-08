@@ -1,9 +1,5 @@
 //
 //  DrinkListViewController.m
-//  SimpleAuthorization
-//
-//  Created by Ryan Huynh on 5/25/16.
-//  Copyright © 2016 Infoway. All rights reserved.
 //
 
 #import "DrinkListViewController.h"
@@ -17,7 +13,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // set the navigation icon to be a plus with addNewDrink selector
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewDrink:)];
+    // set the navigation icon to be a done with showDeleteDrinks selector
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(showDeleteDrinks:)];
 }
 
@@ -49,13 +47,12 @@
 */
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
+    // the count of items in drinkcollection
     return [[[DbManager getSharedInstance] getDrinkCollection] count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //
-
+    // set the cell to display the name of each item
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.text = [[DbManager getSharedInstance] getDrinkCollection][indexPath.row];
     return cell;
@@ -63,11 +60,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSMutableArray *temp=[[DbManager getSharedInstance] getDrinkCollection];
-    
+    // swipe-able cell, delete a item out of database
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        [[DbManager getSharedInstance] deleteDrink:[temp objectAtIndex:indexPath.row]];
+        [[DbManager getSharedInstance] deleteDrink:[[[DbManager getSharedInstance] getDrinkCollection] objectAtIndex:indexPath.row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else {
         NSLog(@"Unhandled editing style! %ld", (long)editingStyle);
@@ -76,6 +72,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.tableView reloadData]; // to reload selected cell
+    // reload changes
+    [self.tableView reloadData];
 }
 @end

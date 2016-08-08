@@ -1,9 +1,5 @@
 //
 //  ViewController.m
-//  SimpleAuthorization
-//
-//  Created by Ryan Huynh on 5/21/16.
-//  Copyright © 2016 Infoway. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -31,9 +27,12 @@
 }
 
 - (IBAction)login:(id)sender {
+
     if (_username.text.length>0 && _password.text.length>0) {
+        // check for authentication
         BOOL check;
         check=[[DbManager getSharedInstance]login:_username.text :_password.text];
+        
         if (check==YES) {
             NSLog(@"log success");
             [self performSegueWithIdentifier:@"sucess" sender: nil];

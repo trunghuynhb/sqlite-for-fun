@@ -1,9 +1,5 @@
 //
 //  AppDelegate.m
-//  SimpleAuthorization
-//
-//  Created by Ryan Huynh on 5/21/16.
-//  Copyright © 2016 Infoway. All rights reserved.
 //
 
 #import "AppDelegate.h"

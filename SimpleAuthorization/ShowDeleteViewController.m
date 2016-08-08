@@ -1,9 +1,5 @@
 //
 //  ShowDeleteViewController.m
-//  SimpleAuthorization
-//
-//  Created by Ryan Huynh on 5/26/16.
-//  Copyright © 2016 Infoway. All rights reserved.
 //
 
 #import "ShowDeleteViewController.h"
@@ -35,15 +31,14 @@
 }
 */
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
+   
     return [[[DbManager getSharedInstance] getDeleteDrinkCollection] count];
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //static NSString *tableID = @"deleteDrink";
-    NSLog(@"error2");
+    // show the deleteDrink on table view
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"deleteDrink"];
-    NSLog(@"error3");
     cell.textLabel.text = [[DbManager getSharedInstance] getDeleteDrinkCollection][indexPath.row];
     
     return cell;

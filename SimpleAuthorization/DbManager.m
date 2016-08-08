@@ -1,25 +1,22 @@
 //
 //  DbManager.m
-//  SimpleAuthorization
-//
-//  Created by Ryan Huynh on 5/21/16.
-//  Copyright © 2016 Infoway. All rights reserved.
+//  Create a SQLite database and using the database to authenticate user login and store some user information.
 //
 
 #import "DbManager.h"
 static DbManager *sharedInstance = nil;
 static sqlite3 *database = nil;
 static sqlite3_stmt *statement = nil;
+static dispatch_once_t onceToken;
 
 @implementation DbManager
 
 +(DbManager*)getSharedInstance{
-    
-    if(!sharedInstance){
-        //init a DbManager obj
+    // access/create a threadsafe singleton shareinstance
+    dispatch_once(&onceToken, ^{
         sharedInstance = [[super allocWithZone:NULL]init];
         [sharedInstance createDB];
-    }
+    });
     
     return sharedInstance;
 }
@@ -29,21 +26,22 @@ static sqlite3_stmt *statement = nil;
     NSString *docsDir;
     NSArray *dirPaths;
     NSFileManager *fileMgr= [NSFileManager defaultManager];
-    
+    // get the document directory path
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     docsDir = dirPaths[0];
-    
+    // create the databasePath by adding user.db into the docDir
     databasePath = ([[NSString alloc] initWithString:[docsDir stringByAppendingPathComponent:@"user.db"]]);
     NSLog(@"%@", databasePath);
-    
+    // check and create initial tables
     if (![fileMgr fileExistsAtPath:databasePath]) {
         
         const char *dbpath= [databasePath UTF8String];
         if (sqlite3_open(dbpath, &database)== SQLITE_OK) {
-            
+            // create user and drink query
             char *err;
             const char *query= "create table if not exists user (id integer primary key autoincrement, username text unique, password text)";
             const char *drinksQuery= "create table if not exists drinks (id integer primary key autoincrement, user_id integer, name text, price text)";
+            // execute queries
             if (sqlite3_exec(database, query, NULL, NULL,&err) != SQLITE_OK){
                 isSuccess=NO;
             }
@@ -51,7 +49,7 @@ static sqlite3_stmt *statement = nil;
             if (sqlite3_exec(database, drinksQuery, NULL, NULL,&err) != SQLITE_OK){
                 isSuccess=NO;
             }
-            
+            // close the connection when done
             sqlite3_close(database);
             NSLog(@"success crate db");
             return isSuccess;
@@ -68,10 +66,12 @@ static sqlite3_stmt *statement = nil;
 -(BOOL)registerUser:(NSString *)username :(NSString *)password{
     char *err;
     const char *dbpath = [databasePath UTF8String];
+    // register user insert user into table
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-        
+            // create insert query
             NSString *insertSQL = [NSString stringWithFormat:@"insert into user (username, password) values (\"%@\",\"%@\")", username, password];
             const char *insert_query = [insertSQL UTF8String];
+            // execute the query
             if(sqlite3_exec(database, insert_query, NULL, NULL, &err)==SQLITE_OK){
             
                 NSLog(@"create success");
@@ -95,7 +95,7 @@ static sqlite3_stmt *statement = nil;
     deleteDrinkCollection = [[NSMutableArray alloc]init];
     BOOL isFound = NO;
     const char *dbpath = [databasePath UTF8String];
-    NSLog(@"%@", databasePath);
+    // check if user is in the database
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
         NSString *querySQL = [NSString stringWithFormat:@"select username from user where username=\"%@\" and password=\"%@\"", username, password];
         const char *query = [querySQL UTF8String];
@@ -109,6 +109,7 @@ static sqlite3_stmt *statement = nil;
                 return isFound;
                 
             }
+            // do nothing if fail
             else {
                 sqlite3_reset(statement);
                 isFound = NO;
@@ -124,6 +125,7 @@ static sqlite3_stmt *statement = nil;
 -(BOOL)addDrink:(NSString *)name :(NSString *)price{
     char *err;
     const char *dbpath = [databasePath UTF8String];
+    // add drink into table
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
         
         
@@ -145,21 +147,21 @@ static sqlite3_stmt *statement = nil;
 }
 
 -(NSMutableArray *)getDrinkCollection{
-    //USE A DICTIONARY FOR THIS
+    
     const char *dbpath = [databasePath UTF8String];
+    // return an array with all the drinks
     if (sqlite3_open(dbpath, &database) == SQLITE_OK){
         
         NSString *querySQL = [NSString stringWithFormat:@"select * from drinks where user_id = \"%ld\"", user_id];
         const char *query_stmt = [querySQL UTF8String];
-        //NSMutableArray *drinkCollection = [[NSMutableArray alloc]init];
+        
         NSMutableArray *drinkCollection = [[NSMutableArray alloc]init];
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK){
             while (sqlite3_step(statement) == SQLITE_ROW){
-                //int drinkID = sqlite3_column_int(statement, 0);
+                
                 char *nameField = (char *) sqlite3_column_text(statement, 2);
                 NSString *name = [[NSString alloc]initWithUTF8String:nameField];
                 [drinkCollection addObject:name];
-                //[drinkCollection setObject:name forKey:@(drinkID)];
             }
         
             sqlite3_reset(statement);
